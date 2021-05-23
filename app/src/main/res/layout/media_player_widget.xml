@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/Root"
+	android:layout_width="@dimen/widget_size2x2"
+	android:layout_height="@dimen/widget_size2x2"
+	android:layout_gravity="center"
+	android:layout_margin="@dimen/widget_margin"
+	android:background="@drawable/media_player_widget_shape">
+
+	<ImageView
+		android:id="@+id/AlbumArt"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/media_picture_shape"
+		android:contentDescription="@string/album_art_description"
+		android:scaleType="fitXY" />
+
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignEnd="@id/AlbumArt"
+		android:layout_alignBottom="@id/AlbumArt"
+		android:layout_marginEnd="15dp"
+		android:layout_marginBottom="15dp">
+
+		<ImageButton
+			android:id="@+id/PlayPauseButton"
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:padding="8dp"
+			android:scaleType="fitXY"
+			android:background="@drawable/play_button_shape"
+			android:contentDescription="@string/resume_music"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/play_arrow" />
+	</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="defaultBattery">#028CDB</color>
+    <color name="defaultBatteryBackground">#aa028CDB</color>
+    <color name="criticalBattery">#E04616</color>
+    <color name="criticalBatteryBackground">#aaE04616</color>
+    <color name="chargingBattery">#5BD45F</color>
+    <color name="chargingBatteryBackground">#aa5BD45F</color>
+    <color name="unknownBattery">#DEDB4E</color>
+    <color name="unknownBatteryBackground">#aaDEDB4E</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+</resources>

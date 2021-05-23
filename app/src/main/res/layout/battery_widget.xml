@@ -1,0 +1,122 @@
+ <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/Root"
+	android:layout_width="@dimen/widget_size2x2"
+	android:layout_height="@dimen/widget_size2x2"
+	android:layout_margin="@dimen/widget_margin"
+	android:layout_gravity="center"
+	android:background="@drawable/battery_widget_shape"
+	android:columnCount="2"
+	android:padding="12dp"
+	android:rowCount="2"
+	android:useDefaultMargins="true">
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:fontFamily="Roboto"
+		android:text="Battery"
+		android:textColor="@android:color/primary_text_light"
+		android:textSize="24sp"
+		android:textStyle="bold" />
+
+	<ProgressBar
+		android:id="@+id/BatteryMeter.default"
+		style="@style/Widget.AppCompat.ProgressBar.Vertical"
+		android:layout_width="@dimen/battery_meter_width"
+		android:layout_height="@dimen/battery_meter_height"
+		android:layout_row="1"
+		android:layout_column="0"
+		android:layout_gravity="bottom"
+		android:layout_marginStart="8dp"
+		android:progress="100"
+		android:progressBackgroundTint="@color/defaultBatteryBackground"
+		android:progressTint="@color/defaultBattery"
+		android:visibility="gone" />
+
+	<ProgressBar
+		android:id="@+id/BatteryMeter.charging"
+		style="@style/Widget.AppCompat.ProgressBar.Vertical"
+		android:layout_width="@dimen/battery_meter_width"
+		android:layout_height="@dimen/battery_meter_height"
+		android:layout_row="1"
+		android:layout_column="0"
+		android:layout_gravity="bottom"
+		android:layout_marginStart="8dp"
+		android:progress="50"
+		android:progressBackgroundTint="@color/chargingBatteryBackground"
+		android:progressTint="@color/chargingBattery"
+		android:visibility="gone" />
+
+	<ProgressBar
+		android:id="@+id/BatteryMeter.critical"
+		style="@style/Widget.AppCompat.ProgressBar.Vertical"
+		android:layout_width="@dimen/battery_meter_width"
+		android:layout_height="@dimen/battery_meter_height"
+		android:layout_row="1"
+		android:layout_column="0"
+		android:layout_gravity="bottom"
+		android:layout_marginStart="8dp"
+		android:progress="25"
+		android:progressBackgroundTint="@color/criticalBatteryBackground"
+		android:progressTint="@color/criticalBattery"
+		android:visibility="gone" />
+
+	<ProgressBar
+		android:id="@+id/BatteryMeter.unknown"
+		style="@style/Widget.AppCompat.ProgressBar.Vertical"
+		android:layout_width="@dimen/battery_meter_width"
+		android:layout_height="@dimen/battery_meter_height"
+		android:layout_row="1"
+		android:layout_column="0"
+		android:layout_gravity="bottom"
+		android:layout_marginStart="8dp"
+		android:progress="0"
+		android:progressBackgroundTint="@color/unknownBatteryBackground"
+		android:progressTint="@color/unknownBattery"
+		android:visibility="visible" />
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:orientation="vertical"
+		android:layout_marginStart="-15dp">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/BatteryPercentage"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:fontFamily="Roboto"
+				android:text="95"
+				android:textColor="@android:color/secondary_text_light"
+				android:textSize="30sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:fontFamily="Roboto"
+				android:text="%"
+				android:textColor="@android:color/secondary_text_light"
+				android:textSize="30sp" />
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/ChargingText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="2dp"
+			android:layout_marginBottom="12dp"
+			android:fontFamily="Roboto"
+			android:text="Charging"
+			android:textColor="@android:color/primary_text_light"
+			android:textSize="11sp" />
+	</LinearLayout>
+</GridLayout>
